@@ -1,0 +1,87 @@
+/* Genel */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Slider görsel alanı */
+.slider-img-wrapper {
+    overflow: hidden;
+}
+
+/* Slider görsel */
+.slider-img {
+    
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Hover zoom (sadece mouse olan cihazlar) */
+@media (hover: hover) {
+    .slider-img-wrapper:hover .slider-img {
+        transform: scale(1.08);
+    }
+}
+
+/* Caption genel */
+.custom-caption {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* TABLET (768px - 991px) */
+@media (max-width: 991px) {
+    .slider-img {
+        height: 320px;
+    }
+
+    .custom-caption p {
+        font-size: 14px;
+    }
+}
+
+/* MOBİL (767px ve altı) */
+@media (max-width: 767px) {
+    .slider-img {
+        height: 240px;
+    }
+
+    /* Mobilde caption tamamen gizlenir */
+    .custom-caption {
+        display: none;
+    }
+}
+
+/* Kart resim sabitleme */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Hover zoom efekti */
+.place-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* Hover zoom */
+.place-card img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.place-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobilde açıklamayı gizle */
+@media (max-width: 576px) {
+    .card-text {
+        display: none;
+    }
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
